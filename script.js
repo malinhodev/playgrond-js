@@ -1,6 +1,8 @@
-console.log(4 < 3);
-console.log(4 < 5);
-console.log(4 != 3);
-console.log(4 <= 4);
-console.log(4 === 4);
-console.log(4 > 3);
+/** *exe. 04
+console.log("marlon" == "marlon" && 13 <= 10);
+console.log("marlon" == "marlon" || 13 <= 10);
+console.log(!("marlon" == "marlon"));
+
+*/
+/**exe. 05 */
+console.log('marlon' * 2);
