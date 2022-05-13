@@ -50,7 +50,10 @@ if(nome == 'marlon') {
     console.log(" Não te conheço!");
 }
 */
-
+/*********numero aleatorio
+let aleatorio = Math.random();
+console.log(aleatorio);
+ */
 
 //console.log(Math.pow(2,5));
 /****
@@ -92,7 +95,7 @@ for(i = 0; i <= 50; i++){
 }
  */
 
-/*********numero primo**** */
+/*********numero primo**** 
 let num = 41;
 let divisoes = 0;
 
@@ -107,3 +110,5 @@ if(divisoes == 2) {
 } else {
     console.log(`o número ${num} não é primo`);
 }
+
+*/
