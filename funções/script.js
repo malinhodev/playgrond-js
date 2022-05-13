@@ -95,7 +95,7 @@ console.log(k);
 multiplicar(4,3);
 
 **************/
-/***************arrow function */
+/***************arrow function 
 let consoleTeste = () => {
     console.log('olá mundo!');
 }
@@ -106,7 +106,7 @@ let myName = (name) => {
     console.log(name);
 }
 
-myName('Marlon');
+myName('Marlon'); 
 
 const multiplicar = (a,b) => {
     return a * b;
@@ -116,8 +116,9 @@ console.log(multiplicar(2,2))
 
 const multiplicar2 = a =>  a * 2;
 
-console.log(multiplicar2(3));
+console.log(multiplicar2(3)); */
 
+/********** 
 function soma(a,b) {
 
     if(a === undefined || b === undefined) {
@@ -140,3 +141,43 @@ function saudacao(nome, idade) {
 console.log(saudacao('marlon'));
 console.log(saudacao("bianca", 7));
 
+*/
+/***********argumento default******** 
+
+function potencia(base, exp=2) {
+    return Math.pow(base, exp);
+}
+
+console.log(potencia(2));
+console.log(potencia(2,2));
+console.log(potencia(2,3));*/
+/***********função closure******** 
+
+function lembrarSoma(x) {
+    return function(y) {
+        return x + y;
+    }
+}
+
+let soma1 = lembrarSoma(2);
+console.log(soma1(5));
+
+let soma2 = lembrarSoma(5);
+
+console.log(soma2(7));*/
+
+
+function contador(i) {
+    let cont = i;
+    let somarContador = () => {
+        console.log(cont);
+        cont++;
+    }
+    return somarContador;
+}
+
+let meuContador = contador(5);
+meuContador();
+meuContador();
+meuContador();
+meuContador();
