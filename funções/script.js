@@ -164,9 +164,9 @@ console.log(soma1(5));
 
 let soma2 = lembrarSoma(5);
 
-console.log(soma2(7));*/
+console.log(soma2(7));
 
-
+//exemplo 2
 function contador(i) {
     let cont = i;
     let somarContador = () => {
@@ -180,4 +180,7 @@ let meuContador = contador(5);
 meuContador();
 meuContador();
 meuContador();
-meuContador();
+meuContador();*/
+
+/******função recursion***** */
+
