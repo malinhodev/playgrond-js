@@ -1,3 +1,5 @@
+/***
+
 function saudacao() {
     console.log('hello word!');
 }
@@ -88,4 +90,47 @@ function retornaPositivo (i) {
 }
 retornaPositivo(-3);
 retornaPositivo(53);
-retornaPositivo(-12.5);
+retornaPositivo(-12.5);*/
+
+
+//minha resposta
+/** 
+function limteCaracteres (par){
+    if(par.length > 10){
+        console.log("texto muito longo");
+    }else{
+        console.log("texto dentro do limite");
+    }
+    //professor
+    console.log(par.length);
+}
+
+limteCaracteres("123456789");
+limteCaracteres("ola mundo!");
+limteCaracteres("outro texto para testar");*/
+
+//minha resposta
+/*
+function potencia (a,b) {
+    return Math.pow(a,b);
+    //sintax alternativa
+    //return a ** b;
+}
+
+console.log(potencia(3,2));
+console.log(potencia(4,2));*/
+
+function decrementaPar(i) {
+    for( i <= 100; i--;) {
+        if(i % 2 == 0){
+            console.log(`o numero ${i} é par`);
+        }else{
+            console.log(i);
+            //console.log(`o numero ${i} é ímpar`);
+        }
+        
+}
+
+}
+
+decrementaPar(10);
