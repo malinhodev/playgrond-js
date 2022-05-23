@@ -50,7 +50,7 @@ let obj = {
     'chave3': 3,
 
 }
-//retorna um array
+//retorna um array com o valor de cada chave
 console.log(Object.keys(obj));*/
 
 /********mutação********************
@@ -83,6 +83,7 @@ for(let i = 0; i <= nomes.length; i++) {
     console.log(nomes[i]);
 }
 ***************/
+//METOSDOS DE ARRAY!!!!!!!
 
 /********PUSH, POP*****************
 //PUSH = adiciona no fim do array
@@ -138,16 +139,16 @@ console.log(nums.slice(4));//se não colocar o segundo indice ele vai pegar até
 console.log(nums.slice(-2));//vai pegar os 2 ultimos do array = 3,2
 console.log(nums.slice(5,-1));//vai pegar do indice 5 ate o final -1 = 6,3
     *****/
-/********!!!forEach!!!********************/
+/********!!!forEach!!!*****************
 let nomes = ['marlon', 'maria', 'josé', 'maycon'];
 
 nomes.forEach(nome => {
     console.log("o nome é: " + nome);
 });
+***/
 
 
-
-/********includes********************/
+/********includes***************
 //verifica se um array tem um dterminado elemento.
 
 let carros = ['bmw', 'audi', 'vw', 'fiat'];
@@ -155,8 +156,38 @@ let carros = ['bmw', 'audi', 'vw', 'fiat'];
 console.log(carros.includes('fiat'));//retorna true
 
 
+*****/
+
+/***********reverse************
+//inverte um array
+
+arr = [1,2,3,4,5,6];
+
+console.log(arr.reverse());*****/
 
 
-/********PUSH, POP********************/
+//metodos string!!!
 
+/**********TRIM************
 
+let nome = '    matheus';
+
+let nomeCorrigido = nome.trim();
+
+console.log(nomeCorrigido);//sem espaços
+console.log(nome);**/
+
+/**********padStart*************
+//INSERIR CARACTERES ANTES DA STRING
+
+let sku = "36";//tem que ser string
+
+console.log(sku.padStart(6, "0"));//primeiro parametro é o tanto(limite) de caracteres
+*/
+
+/******************split******************** 
+//divide uma string por um separador, e retorna um array
+
+let frase = "testando o metodo split";
+
+console.log(frase.split(" "));*/
