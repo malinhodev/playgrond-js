@@ -119,7 +119,7 @@ function potencia (a,b) {
 
 console.log(potencia(3,2));
 console.log(potencia(4,2));*/
-
+/********** 
 function decrementaPar(i) {
     for( i <= 100; i--;) {
         if(i % 2 == 0){
@@ -133,4 +133,123 @@ function decrementaPar(i) {
 
 }
 
-decrementaPar(10);
+decrementaPar(10);*/
+
+
+//RESPOSTAS OBJETOS E ARRAY (JSON)!!!!!!!!!!!!!
+
+/************** 
+//exerc: 27
+let arr = ['jose', 50, true, 00, false];
+
+console.log(arr[0]);
+console.log(arr[2]);
+console.log(arr[3]);
+
+//exerc: 28
+let arr = ['jose', 50, true, 00];
+let arr2 = [2,3];
+
+console.log(arr.length);
+console.log(arr2.length);
+
+//exerc: 29
+let onibus = {
+    rodas: 8,
+    passageiros: 40,
+    portas: 2
+}
+delete onibus.rodas;  
+
+console.log(onibus);
+
+onibus.janelas = 20;
+
+console.log(onibus.janelas);
+
+//exerc: 30
+
+let nomes = ["joao", "daniel", "marleson", "marlon"];
+    if(nomes.includes("marlon")){
+        console.log('sim eu existo!!!');
+    } 
+
+//exerc: 31
+let frutas = ["banana", "maca", "uva", ];
+let numeros = [00,25,96,789,2,7,9,1.050];
+let bool = [true,false,false,true,true];
+
+function verificaQuantidade(i) {
+    if(i.length >= 5){
+        console.log("muitos elementos!")
+        console.log(i.length);
+    } else {
+        console.log("puocos elementos")
+        console.log(i.length);
+    }
+}
+
+verificaQuantidade(frutas);
+verificaQuantidade(numeros);
+verificaQuantidade(bool);
+
+//exerc: 32
+//professor
+let nomes = ['marlon', 'maria', 'josé', 'maycon', 'joão'];
+for(let i =0; i < nomes.length; i++) {
+    console.log(nomes[i]);
+}*/
+
+/****
+//eu
+nomes.forEach(nome => {
+    console.log("o nome é: " + nome);
+}); 
+// 33
+let gato = {
+    "raca": "sianes",
+    "cor": "marrom",
+    "olhos": "azuis"
+}
+
+
+
+console.log(gato.raca);
+console.log(gato.cor);
+console.log(gato.olhos);
+
+// 34
+
+let frase = "o homem que tem a sua casa ele fala a qualquer hora da noite";
+
+let nomes = frase.split(" ");
+for(let i =0; i < nomes.length; i++) {
+    console.log(nomes[i]);
+}*/
+
+// 35 calculadora
+
+const calculadora = {
+    somar: function(a,b){
+        return a + b;   
+     },
+     
+     subtrair: function(a,b){
+         return a - b;
+     },
+     
+     dividir: function (a,b){
+          return a / b;
+     },
+     
+     multiplica: function(a,b){
+          return  a * b;
+     }
+}
+
+
+
+console.log(calculadora.somar(2,3));
+console.log(calculadora.subtrair(10,3));
+console.log(calculadora.dividir(10,2));
+console.log(calculadora.multiplica(50,3));

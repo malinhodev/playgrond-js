@@ -149,7 +149,7 @@ nomes.forEach(nome => {
 
 
 /********includes***************
-//verifica se um array tem um dterminado elemento.
+//verifica se um array tem um determinado elemento.
 
 let carros = ['bmw', 'audi', 'vw', 'fiat'];
 
@@ -169,7 +169,7 @@ console.log(arr.reverse());*****/
 //metodos string!!!
 
 /**********TRIM************
-
+//remove espaços
 let nome = '    matheus';
 
 let nomeCorrigido = nome.trim();
@@ -191,3 +191,75 @@ console.log(sku.padStart(6, "0"));//primeiro parametro é o tanto(limite) de car
 let frase = "testando o metodo split";
 
 console.log(frase.split(" "));*/
+
+/******************join******************
+//junta elementos em um array em uma frase, por meio de um separardor
+//contrario do split paga um array e transforma em uma string
+let frase = 'testando o metodo join!'
+
+let palavras = frase.split(" ");
+
+let novaFrase = palavras.join("@");
+
+console.log(novaFrase);
+console.log(palavras.join(" "));**/
+
+/*****************repeat*****************
+//repete uma string
+
+let palavra = " repetir";
+
+console.log(palavra.repeat(20));****/
+
+/*****************!!rest operator!!****************
+//uma forma de uma função receber indefinidos parâmetros
+//o operador rest vai virar um array
+//o parametro e definido por: ...nome
+
+let num = 1;
+let num1 = 2;
+let num2 = 3;
+let num3 = 4;
+
+function imprimirNumeros(...args) {
+    for(let i = 0; i < args.length; i++) {
+        console.log(args[i]);
+    }
+}
+
+imprimirNumeros(num,num1,num2);
+console.log('pausa');
+imprimirNumeros(num2,num3);
+console.log('pausa');
+imprimirNumeros(2,6,4,7,8,8,9,6,3,4,5,1);*/
+
+/******************Destructuring em objetos*********************
+//podemos defenir variáveis com propriedades do objeto com uma notação diferente, chamdada destructuring
+//cria variáveis apartir de um objeto
+
+
+let carro = {
+    portas: 4,
+    portamalas: '200lt',
+    motor: '2.0',
+}
+
+const {portas: vportas, portamalas: vportamalas, motor: vmotor} = carro;//objetos em chaves
+
+console.log(vmotor);
+console.log(vportamalas);
+console.log(vportas); */
+
+/******************Destructuring em arrays********************* 
+//podemos defenir variaveis com os valores do array utilizando o destructuring
+//cria variáveis apartir de um array
+
+let numeros = [2,4,5,8];
+
+let [num1, num2, num3, num4] = numeros //array em conchetes
+
+console.log(num1);
+console.log(num2);
+console.log(num4);*/
+
+
