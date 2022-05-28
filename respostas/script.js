@@ -225,7 +225,7 @@ let frase = "o homem que tem a sua casa ele fala a qualquer hora da noite";
 let nomes = frase.split(" ");
 for(let i =0; i < nomes.length; i++) {
     console.log(nomes[i]);
-}*/
+}
 
 // 35 calculadora
 
@@ -252,4 +252,54 @@ const calculadora = {
 console.log(calculadora.somar(2,3));
 console.log(calculadora.subtrair(10,3));
 console.log(calculadora.dividir(10,2));
-console.log(calculadora.multiplica(50,3));
+console.log(calculadora.multiplica(50,3));*/
+
+
+/****************orientação a objetos************** 
+
+//36
+//MINHA RESPOSTA não foi satisfatoria
+class Conta {
+    constructor(saldo) {
+        this.saldo = saldo;
+        
+    }
+
+    get getSaldo(){
+        return this.saldo;
+    }
+
+    set setSaldo(saldo){
+        this.saldo = saldo,
+        console.log('foi depositatdo: ' + saldo)
+    }
+}
+
+let minhaConta = new Conta (0);
+
+console.log(minhaConta);
+minhaConta.setSaldo = 500;
+console.log(minhaConta.getSaldo);*/
+
+//PROFESSOR
+
+
+class Conta {
+    constructor(saldo) {
+        this.saldo = saldo;
+        
+    }
+    depositar(valor){
+        this.saldo += valor;
+    }
+    saque(valor){
+        this.saldo -= valor;
+    }
+
+}
+
+let conta = new Conta (1000);
+conta.depositar(1000);
+console.log(conta.saldo);
+conta.saque(500);
+console.log(conta.saldo);
