@@ -304,7 +304,7 @@ console.log(conta.saldo);
 conta.saque(500);
 console.log(conta.saldo);*/
 
-/*********************** */
+/***********************
 // 37 criando carrinho compras
 //professor
 class Carrinho {
@@ -380,9 +380,48 @@ class Carrinho {
   
   carrinho.removeItem({id: 01, nome: "Camisa", qtd: 1, preco: 20});
   
-  console.log(carrinho);
+  console.log(carrinho); */
 
+  /********************************************** 
+  //38
+  // professor
 
+  class Entregar {
+    constructor(nome,rua,bairro,cidade,estado){
+        this.nome = nome;
+        this.rua = rua;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+    }
 
+    set novoNome(novoNome){
+        this.nome = novoNome;
+    }
 
+    set novoRua(novoRua){
+        this.rua = novoRua;
+    }
+
+    set novoBairro(novoBairro){
+        this.bairro =novoBairro;
+    }
+
+    set novoCidade(novoCidade){
+        this.cidade = novoCidade;
+    }
+
+    set novoEstado(novoEstado){
+        this.estado = novoEstado;
+    }
+
+  }
+
+let endereço = new Entregar ('marlon','raimundo pinheiro bastos', 'olavo oliveira', 'fortaleza', 'CE');
+
+console.log(endereço);
+
+endereço.novoRua = 'raimundo rocha de  menezes';
+
+console.log(endereço);*/
 
