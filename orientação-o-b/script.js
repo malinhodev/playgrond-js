@@ -149,12 +149,14 @@ console.log(new Cachorro instanceof Mamifero);//true pois cachorro é uma instac
 //E acessa-las para resgatar os seus valores
 
 let carro = {
+    tipo: "suv",
+    rodas: 4,
+    opicionais: ["teto solar", "blindagem", "ar condicionado"],
     portas: 4,
     cor: 'verde',
-    opicionais: ["teto solar", "blindagem", "ar condicionado"],
     revisado: true,
     "tem modo eco": false,//declaração com mais de uma palavra.
-    //metodo/função
+    //metodos/funções
     frear: function() {
         console.log("tiuuuuuuuuuuuu");
     },
@@ -174,7 +176,7 @@ let carro = {
         airBags: true,
         cintoDeSegurança: true,
         interior: ['couro', 'borracha', 'tecido'],
-
+        corInterior: 'cinza',
     }
 
 }
@@ -203,20 +205,33 @@ for(let i = 0; i < carro.opicionais.length; i++) {
 if(carro.revisado == true){
     console.log("fazer revisão após 10.000km rodados.");
 }
-
-    //Propriedades com mais de uma palavra
-console.log(carro["tem modo eco"]);
+   
+console.log(carro["tem modo eco"]);//Evocando Propriedades com mais de uma palavra
 
 //Acessando propriedades por variáveis
 let a = 'cor';//cor é uma proriedade do obj. carro.
-console.log(carro[a]);//ira imprimir o valor da propriedade cor.
+console.log(carro[a]);//ira imprimir o valor da propriedade cor do obj carro.
 
  //carro.cor = "vermelho";
  //console.log(carro[a]);
 carro.frear();//evocando=chamando  metodo=função
 
-carro.setCor("vermelho");
+carro.setCor("vermelho");//evocando=chamando metodo e setando cor
 carro.getCor();
 
 console.log(carro.vemDeFabrica.airBags); //evocando=chamando objeto dentro de objeto
 console.log(carro.vemDeFabrica.interior[0]);//indice do array do obj dentro do obj
+console.log(carro.vemDeFabrica.corInterior);
+    //criando nova propriedade para objeto carro
+carro.calotas = true;
+
+carro.virar = function(direção) {
+    console.log("virando para a: " + direção);
+};//OBS: não da para usar (es6 function) fora do escopo do obj
+
+carro.virar('esquerda');
+//carro.virar('direita');
+//console.log(carro.calotas);
+
+delete carro.rodas;//deletando propriedade rodas
+//deletar propriedades do obj não é uma boa prática!
