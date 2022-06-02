@@ -154,6 +154,29 @@ let carro = {
     opicionais: ["teto solar", "blindagem", "ar condicionado"],
     revisado: true,
     "tem modo eco": false,//declaração com mais de uma palavra.
+    //metodo/função
+    frear: function() {
+        console.log("tiuuuuuuuuuuuu");
+    },
+    acelerar: function(){
+        console.log("vruumm vruuummm");
+    },
+    //metodos ES6 não precisa => :function
+    getCor(){
+        console.log("A cor do carro será: " + this.cor);
+    },
+    setCor(novaCor){
+        this.cor = novaCor;
+    },
+    //objeto dentro de objeto
+    vemDeFabrica: {
+        painelMultimidia: true,
+        airBags: true,
+        cintoDeSegurança: true,
+        interior: ['couro', 'borracha', 'tecido'],
+
+    }
+
 }
 
 console.log(carro.portas);
@@ -190,3 +213,10 @@ console.log(carro[a]);//ira imprimir o valor da propriedade cor.
 
  //carro.cor = "vermelho";
  //console.log(carro[a]);
+carro.frear();//evocando=chamando  metodo=função
+
+carro.setCor("vermelho");
+carro.getCor();
+
+console.log(carro.vemDeFabrica.airBags); //evocando=chamando objeto dentro de objeto
+console.log(carro.vemDeFabrica.interior[0]);//indice do array do obj dentro do obj
