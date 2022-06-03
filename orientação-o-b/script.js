@@ -252,3 +252,16 @@ carro.comprarCompleto();
  * serve para manipular a DOM*/
 
 //console.log(window);
+
+/*******======= PROP CONSTRUCT (Construtor) ==========
+ * Quando um objeto é criado,sempre uma propriedadde
+ * construtor é adcionada a ele.
+ * Contendo a referencia de como o obj foi criado.
+ * 
+ * //////////Passando referencia de objeto
+ * Quando você atribui um obj criado para outra variavel,
+ * você só está passando uma referência.
+ * Se alterar a referencia , o original também é alterado.
+*/
+
+
