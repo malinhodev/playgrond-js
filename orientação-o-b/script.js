@@ -170,6 +170,10 @@ let carro = {
     setCor(novaCor){
         this.cor = novaCor;
     },
+
+    comprarCompleto(){
+        console.log("seu carro terá: " + this.opicionais);
+    },
     //objeto dentro de objeto
     vemDeFabrica: {
         painelMultimidia: true,
@@ -189,6 +193,8 @@ console.log(carro['portas']);
 if(carro.portas > 2){
     console.log("este carro tem mais de duas portas!!!")
 }
+
+
 
 
        //Tipos de de dados e propriedades
@@ -235,3 +241,14 @@ carro.virar('esquerda');
 
 delete carro.rodas;//deletando propriedade rodas
 //deletar propriedades do obj não é uma boa prática!
+
+carro.comprarCompleto();
+
+/*******====== WINDOW ==========
+ * Sempre que é iniciada uma página web traz um objeto chamado window
+ * as variaveis globais ficam atreladas a ele como propriedades
+ * os métodos da linguagem também podem ser invocados pela window
+ * o this no escopo global também é referenciado window 
+ * serve para manipular a DOM*/
+
+//console.log(window);
