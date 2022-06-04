@@ -142,6 +142,8 @@ pug.latir();*/
 console.log(new Cachorro instanceof Mamifero);//true pois cachorro é uma instacia de mamifero
 */
 
+
+
 /*======== Propriedades do Objeto=========*/
 //As propriedades são as caracteriticas dos objetos
 // EX: cor, portas, nome, marca e etc...
@@ -181,6 +183,7 @@ let carro = {
         cintoDeSegurança: true,
         interior: ['couro', 'borracha', 'tecido'],
         corInterior: 'cinza',
+        steps: 1,
     }
 
 }
@@ -233,7 +236,7 @@ carro.calotas = true;
 
 carro.virar = function(direção) {
     console.log("virando para a: " + direção);
-};//OBS: não da para usar (es6 function) fora do escopo do obj
+};//OBS: não da para usar (ES6 function) fora do escopo do obj
 
 carro.virar('esquerda');
 //carro.virar('direita');
@@ -262,6 +265,53 @@ carro.comprarCompleto();
  * Quando você atribui um obj criado para outra variavel,
  * você só está passando uma referência.
  * Se alterar a referencia , o original também é alterado.
-*/
+ * 
+ * /////////Comparando objs
+ * você só consegue ter objs iguais, criando uma refeência
+ * objs criados a partir de um construtor, sempre serão diferentes
+ * 
+ * ////////Object literals
+ * Função do ES6, que permite criar objetos mais rapidamente
+ * utilizando nomes de variáveis para nomes de propriedades*/
 
+let x = 1;
+let y = 2;
 
+let obj = {x,y};
+
+console.log(obj.x);
+
+//Também não precisamos declarar function para metodos no ES6
+
+let megazord = {
+    nome: 'megazorde',
+    arma: 'espada lazer',
+    explodirTudo() {
+        console.log("BOOM!");
+    },
+}
+
+megazord.explodirTudo();//apenas no escopo do obj fora do escopo é obrigatório usar function!
+
+//Podemos também criar propriedades com variavéis ou retorno de função
+//ajudando a escrever menos codigo.
+
+let t = "tipo_de_";
+
+let veiculo = {
+    [t+"aviao"]: "boing",
+}
+
+console.log(veiculo.tipo_de_aviao);
+
+/*====== Atributos das propriedades ===*/
+//Toda propriedade tem atributos já criados pela linguagem, (Enumerable e Configurable).
+//Configurable, por exemplo, se estiver false, não deixa a propriedade ser editada ou deletada.
+
+let pessoa = {
+    nome: 'marlon',
+}
+
+console.log(Object.getOwnPropertyDescriptors(pessoa, 'nome'));
+
+//console.log(Object.getOwnPropertyDescriptors(window, 'scrollX'));
