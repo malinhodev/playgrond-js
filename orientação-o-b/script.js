@@ -267,7 +267,7 @@ carro.comprarCompleto();
  * Se alterar a referencia , o original também é alterado.
  * 
  * /////////Comparando objs
- * você só consegue ter objs iguais, criando uma refeência
+ * você só consegue ter objs iguais, criando uma referência
  * objs criados a partir de um construtor, sempre serão diferentes
  * 
  * ////////Object literals
@@ -315,3 +315,26 @@ let pessoa = {
 console.log(Object.getOwnPropertyDescriptors(pessoa, 'nome'));
 
 //console.log(Object.getOwnPropertyDescriptors(window, 'scrollX'));
+
+     //******Copiando propriedades
+//Os objetos herdam métodos do objeto pai Object, e podemos utilizá-los.
+//Para copiar props utilizamos o método => assign.
+
+let pessoa1 = {
+    nome: "marlon",
+    getNome(){
+        console.log("esse é o nome: " + this.nome);
+    },
+
+};
+
+let pessoa2 = {
+    nome: "joão",//será sobreposto
+    age: 12,
+};
+
+Object.assign(pessoa2, pessoa1);//segundo parametro é o original
+
+console.log(pessoa2);
+
+pessoa2.getNome();
