@@ -150,6 +150,10 @@ console.log(new Cachorro instanceof Mamifero);//true pois cachorro é uma instac
 //Podemos iniciar um objeto com várias propriedades
 //E acessa-las para resgatar os seus valores
 
+       //Tipos de de dados e propriedades
+//as propriedades aceitam qualquer tipo de dados do javascript
+//booleanos, numbers, strings e arrays
+
 let carro = {
     tipo: "suv",
     rodas: 4,
@@ -198,11 +202,6 @@ if(carro.portas > 2){
 }
 
 
-
-
-       //Tipos de de dados e propriedades
-//as propriedades aceitam qualquer tipo de dados do javascript
-//booleanos, numbers, strings e arrays
 
 console.log(carro.revisado);
 console.log(carro.opicionais);
@@ -257,7 +256,7 @@ carro.comprarCompleto();
 //console.log(window);
 
 /*******======= PROP CONSTRUCT (Construtor) ==========
- * Quando um objeto é criado,sempre uma propriedadde
+ * Quando um objeto é criado,sempre uma propriedade/prop
  * construtor é adcionada a ele.
  * Contendo a referencia de como o obj foi criado.
  * 
@@ -338,3 +337,62 @@ Object.assign(pessoa2, pessoa1);//segundo parametro é o original
 console.log(pessoa2);
 
 pessoa2.getNome();
+
+/****** Comparando Objetos ******/
+
+let teste = {
+    a: 1,
+}
+
+let teste2 = {
+    a: 1,
+}
+console.log(Object.is(teste, teste2));// === -> false
+//object.is é a mesma coisa que === compara se os osbjetos são identicos.       //Tipos de de dados e propriedades
+//as propriedades aceitam qualquer tipo de dados do javascript
+//booleanos, numbers, strings e arrays
+
+/*****===== Destructuring =====*******/
+//outro recurso que veio com o ES6 trazendo algumas funcionalidades
+//podemos criar várias variáveis com uma linha só, desestruturando um objeto
+
+let moto = {
+    rodas: 2,
+    passageiros: 2,
+    motor: "250cc",
+    radiador: true,
+    cor: 'preta',
+    aro: 18,
+}
+//Há também a possibilidade de utilizar o destructuring para mudar o valor
+//de vriáveis já criadas.
+let aro = 17;
+console.log(aro);//valor aterado
+({aro} = moto);
+console.log(aro);//valor normal
+
+//let {rodas, passageiros, motor, radiador, cor, aro} = moto;
+
+// O destructuring também funciona com arrays.
+
+let frutas = ['banana', 'laranja', 'maçã'];
+let [fruta1,fruta2,fruta3] = frutas;//o nome da chave fica ao seu critério.
+console.log(fruta1,fruta2,fruta3);
+
+//Destructuring e rest operator
+//O resta operator é utilizado quando não sabemos quantos argumentos virão para o destructuring
+//Podemos criar um array com um tamanhao infinito, com os restos dos elementos passados.
+
+let arr = [1,3,45,6,7,78, 'asd', 'asd'];
+let [i,b, ...c] = arr;
+
+console.log(i);
+console.log(b);
+console.log(...c);
+
+
+
+
+
+
+
