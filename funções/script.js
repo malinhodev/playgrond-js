@@ -184,3 +184,22 @@ meuContador();*/
 
 /******função recursion***** */
 
+
+
+/***********== CALL ==************ */
+// Call é um prototype (método/nativo) da função
+let a = {
+    nome: 'matheus',
+    dizerNome() {
+        console.log("O nome é: " +this.nome)
+    },
+}
+
+let b = {
+    nome: 'joão',
+}
+
+a.dizerNome();
+
+a.dizerNome.call(b);
+

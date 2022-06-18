@@ -1,4 +1,19 @@
+    //Objetos
+const um = {};
+const dois = new Object();
+
+console.log(um);
+console.log(dois);
+
+    //arrays
+let c = [0,1,2];
+let d = new Array(3,4,5);
+
+console.log(c);
+console.log(d);
+
 /************************
+
 let obj = {
     nome: 'marlon',
     idade: 29,
@@ -292,3 +307,4 @@ removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 removed = myFish.splice(3, Number.MAX_VALUE);
 //myFish é ["parrot", "anemone", "blue"]
 //removed é ["trumpet", "surgeon"]*/
+

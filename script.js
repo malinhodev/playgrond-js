@@ -112,3 +112,22 @@ if(divisoes == 2) {
 }
 
 */
+//== parseInt(); | parseFloat(); ==
+
+let a = 2;
+let b = new Number(3.14);
+
+console.log(a);
+console.log(b);
+
+let c = 12.555;
+//parseInt(); coverte para interiro
+console.log(Number.parseInt(c));
+console.log(parseInt(c));
+
+let d = '13.3787843';
+//parseFloat(); converte string para number
+console.log(Number.parseFloat(d));
+console.log(parseFloat(d));
+
+console.log(Number.parseInt(b));

@@ -150,7 +150,7 @@ console.log(new Cachorro instanceof Mamifero);//true pois cachorro é uma instac
 //Podemos iniciar um objeto com várias propriedades
 //E acessa-las para resgatar os seus valores
 
-       //Tipos de de dados e propriedades
+       //Tipos de dados e propriedades
 //as propriedades aceitam qualquer tipo de dados do javascript
 //booleanos, numbers, strings e arrays
 
