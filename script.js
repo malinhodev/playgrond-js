@@ -131,3 +131,11 @@ console.log(Number.parseFloat(d));
 console.log(parseFloat(d));
 
 console.log(Number.parseInt(b));
+
+//== toFixe(); | toPrecision(); ==
+//toFixe limita a quantidade de numeros após a virgua
+//toPrecision arredonda o numero após a vírgula
+let f1 = 12.58963214758;
+
+console.log(f1.toFixed(2));//limitou a 2 numeros após a virgula
+console.log(f1.toPrecision(3));//arredondou com base nos 3 numeros após a virgula.
