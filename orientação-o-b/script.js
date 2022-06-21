@@ -379,7 +379,7 @@ let frutas = ['banana', 'laranja', 'maçã'];
 let [fruta1,fruta2,fruta3] = frutas;//o nome da chave fica ao seu critério.
 console.log(fruta1,fruta2,fruta3);
 
-//Destructuring e rest operator
+//=== Destructuring e rest operator
 //O resta operator é utilizado quando não sabemos quantos argumentos virão para o destructuring
 //Podemos criar um array com um tamanhao infinito, com os restos dos elementos passados.
 
