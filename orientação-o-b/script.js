@@ -144,7 +144,7 @@ console.log(new Cachorro instanceof Mamifero);//true pois cachorro é uma instac
 
 
 
-/*======== Propriedades do Objeto=========*/
+/*======== Propriedades do Objeto=========
 //As propriedades são as caracteriticas dos objetos
 // EX: cor, portas, nome, marca e etc...
 //Podemos iniciar um objeto com várias propriedades
@@ -244,7 +244,7 @@ carro.virar('esquerda');
 delete carro.rodas;//deletando propriedade rodas
 //deletar propriedades do obj não é uma boa prática!
 
-carro.comprarCompleto();
+carro.comprarCompleto(); */
 
 /*******====== WINDOW ==========
  * Sempre que é iniciada uma página web traz um objeto chamado window
@@ -271,7 +271,7 @@ carro.comprarCompleto();
  * 
  * ////////Object literals
  * Função do ES6, que permite criar objetos mais rapidamente
- * utilizando nomes de variáveis para nomes de propriedades*/
+ * utilizando nomes de variáveis para nomes de propriedades
 
 let x = 1;
 let y = 2;
@@ -301,9 +301,9 @@ let veiculo = {
     [t+"aviao"]: "boing",
 }
 
-console.log(veiculo.tipo_de_aviao);
+console.log(veiculo.tipo_de_aviao); */
 
-/*====== Atributos das propriedades ===*/
+/*====== Atributos das propriedades ===
 //Toda propriedade tem atributos já criados pela linguagem, (Enumerable e Configurable).
 //Configurable, por exemplo, se estiver false, não deixa a propriedade ser editada ou deletada.
 
@@ -313,9 +313,9 @@ let pessoa = {
 
 console.log(Object.getOwnPropertyDescriptors(pessoa, 'nome'));
 
-//console.log(Object.getOwnPropertyDescriptors(window, 'scrollX'));
+//console.log(Object.getOwnPropertyDescriptors(window, 'scrollX')); */
 
-     //******Copiando propriedades
+     /******Copiando propriedades
 //Os objetos herdam métodos do objeto pai Object, e podemos utilizá-los.
 //Para copiar props utilizamos o método => assign.
 
@@ -336,9 +336,9 @@ Object.assign(pessoa2, pessoa1);//segundo parametro é o original
 
 console.log(pessoa2);
 
-pessoa2.getNome();
+pessoa2.getNome();*/
 
-/****** Comparando Objetos ******/
+/****** Comparando Objetos *****
 
 let teste = {
     a: 1,
@@ -350,9 +350,9 @@ let teste2 = {
 console.log(Object.is(teste, teste2));// === -> false
 //object.is é a mesma coisa que === compara se os osbjetos são identicos.       //Tipos de de dados e propriedades
 //as propriedades aceitam qualquer tipo de dados do javascript
-//booleanos, numbers, strings e arrays
+//booleanos, numbers, strings e arrays */
 
-/*****===== Destructuring =====*******/
+/*****===== Destructuring =====******
 //outro recurso que veio com o ES6 trazendo algumas funcionalidades
 //podemos criar várias variáveis com uma linha só, desestruturando um objeto
 
@@ -388,7 +388,7 @@ let [i,b, ...c] = arr;
 
 console.log(i);
 console.log(b);
-console.log(...c);
+console.log(...c);*/
 
 
 
