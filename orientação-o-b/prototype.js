@@ -69,3 +69,8 @@ console.log(fusca.cor);
 
 fusca.cor = 'rosa';
 console.log(fusca.cor);
+
+//verificando props de um prototype
+
+console.log(fusca.hasOwnProperty('marca'));//true pois existe essa propriedade no objeto.
+console.log(fusca.constructor.prototype.hasOwnProperty('marca'));//false pois não foi criado essa prop no prototype. 
