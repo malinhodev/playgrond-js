@@ -74,3 +74,21 @@ console.log(fusca.cor);
 
 console.log(fusca.hasOwnProperty('marca'));//true pois existe essa propriedade no objeto.
 console.log(fusca.constructor.prototype.hasOwnProperty('marca'));//false pois não foi criado essa prop no prototype. 
+
+/*======= LOOPS PARA OBJETOS =======*/
+//O loop mais indicado para percorrer objetos é o for...in
+//isso por que o for normal serve mais para arrays.
+
+for(prop in fusca) {
+    console.log(prop + ' => ' + fusca[prop]);
+}
+
+/*======== Checkando se é prototype de algum objeto ========*/
+//com o método isPrototypeOf(); conseguimos checar se um obj
+//é prototype de outro.
+
+console.log(Carro.isPrototypeOf(fusca));//false pois não existe nenhum objeto atrelado ao prototype do carro
+
+
+
+
