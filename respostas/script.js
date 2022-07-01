@@ -425,3 +425,46 @@ endereço.novoRua = 'raimundo rocha de  menezes';
 
 console.log(endereço);*/
 
+/* 39 
+
+class Carro {
+    constructor(marca,modelo,cor){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cor = cor;
+        this.tanque = 20;
+        this.pneus = 4;
+    }
+
+    dirigir(destino){
+        console.log('foi para ' +destino);
+        this.tanque -= 1;
+    }
+
+    abastecer = function(){
+        this.tanque += 10;
+    }
+}
+
+let celta = new Carro('chevrolet','celta','vermelho');
+console.log(celta);
+
+celta.dirigir('mercantil');
+console.log(celta.tanque);
+
+celta.abastecer();
+console.log(celta.tanque);
+celta.dirigir('mercantil');
+celta.dirigir('casa');
+celta.dirigir('mercantil');
+celta.dirigir('casa');
+celta.dirigir('trabalho');
+celta.dirigir('academia');
+celta.dirigir('casa');
+celta.dirigir('trabalho');
+celta.dirigir('mercantil');
+
+console.log(celta.tanque);
+celta.dirigir('casa');
+celta.dirigir('casa');
+console.log(celta.tanque);*/
