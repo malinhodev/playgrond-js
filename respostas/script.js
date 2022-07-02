@@ -468,3 +468,103 @@ console.log(celta.tanque);
 celta.dirigir('casa');
 celta.dirigir('casa');
 console.log(celta.tanque);*/
+
+/* exerc: 40 */
+
+class Conta {
+    constructor(contaCC,contaCP){
+        
+        this.contaCC = 0;
+        this.contaCP = 0;
+        this.jurosCP = 0.5;
+    }
+
+    saldoCC(){
+        console.log("seu saldo é: " + this.contaCC +"R$.");
+    }
+
+    saldoCP(){
+        this.saldo = this.contaCP * this.jurosCP / 100;
+        this.valorTotal = this.saldo + this.contaCP;
+        console.log("Poupança: "+ this.valorTotal +"R$.");
+    }
+
+    sacarCC(valor){
+        this.valor = valor;
+        this.saque = valor;
+        if(this.contaCC >= valor){
+            this.contaCC -= this.saque;
+            console.log("você sacou: "+ this.saque + " R$ novo saldo conta corrente: "+ this.contaCC+" R$.");
+        }else{
+            console.log("saldo insuficiente!");
+        }
+        this.valor = 0;
+    }
+
+    sacarCP(valor){
+        this.valor = valor;
+        this.saque = valor;
+        if(this.contaCP >= valor){
+            this.contaCP -= this.saque;
+            console.log("você sacou: "+ this.saque + " R$ novo saldo conta Poupança: "+ this.contaCP+" R$.");
+        }else{
+            console.log("saldo da poupança insuficiente!");
+        }
+        this.valor = 0;
+    }
+
+    transferirParaCP(v){
+           this.v = v;
+           let val = v;
+        if(this.contaCC >= val){
+             this.contaCC -= val;
+             this.contaCP += val;
+            console.log('transferencia concluida');
+            console.log('saldo conta poupança: '+this.contaCP);
+        }else{
+            console.log('saldo insuficiente!');
+        }
+        this.v = 0;
+    }
+
+    transferirParaCC(v){
+        this.v = v;
+        let val = v;
+     if(this.contaCP >= val){
+          this.contaCP -= val;
+          this.contaCC += val;
+         console.log('transferencia concluida');
+         console.log('saldo da conta : '+this.contaCP);
+     }else{
+         console.log('saldo conta poupança insuficiente!');
+     }
+     this.v = 0;
+ }
+ 
+    depositarCC(v){
+        this.contaCC += v;
+    }
+
+    depositarCP(v){
+        this.contaCP += v;
+    }
+}
+
+class ContaEspecial extends Conta{
+    constructor(contaCC,contaCP){
+        super(contaCC,contaCP)
+        this.jurosCP = 1;
+    }
+    
+}
+
+let minhaConta = new Conta;
+let contaespecial = new ContaEspecial;
+
+
+
+/***/console.log(minhaConta);
+
+
+
+/***/console.log(contaespecial);
