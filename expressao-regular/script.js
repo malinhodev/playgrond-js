@@ -59,3 +59,68 @@ console.log(tresLetras.test("123"));//true
 //tudo, menos alguns caracteres
 
 
+/*** Operador Plus + */
+//Quando o + está após algum elemento da expressão,
+//este elemento pode se repetir mais de uma vez indefenidamente.
+
+/*** Operador Question ? */
+//faz com que o dígito anterior seja opcional.
+
+/*** Ocorrência Precisa {} */
+//inserir o numero de vezes(ocorrência) entre chaves
+
+const cep = /\d{5}-\d{3}/;//expressão para verificar cep
+const tel = /\(\d{2}\)\d{4,5}-\d{4}/;//expressão para verificar numero contato.
+
+/*** Método .exec */
+//nos retorana um obj com algumas informações
+//sobre a regex, se nada for encontrado retorna null.
+
+const digitos = /\d+/;
+console.log(digitos.exec("tem 100 aqui"));
+console.log(digitos.exec("aqui não tem"));
+
+/**** Método match  */
+//funciona de forma similar ao exec.
+//não é muito utilizado
+//é um método do prototype string
+
+const frase = "o número 100 tá aqui".match(/\d+/);
+console.log(frase);
+
+/*** Choice pattern 
+//podemos colocar uma instrução na regex que 
+//funciona como um ||(ou-or) das condicionais
+//retorna true ou false
+let frutas = /\d+ (bananas|maçãs|laranjas)/;
+
+console.log(frutas.test("10 bananas"));//true
+console.log(frutas.test("25 batatas"));//false
+console.log(frutas.test("8 laranjas"));//true */
+
+/** validando dominio 
+let validarDominio = /[?www.]\w+\.com|com.br/;
+
+console.log(validarDominio.test("www.google.com"));
+console.log(validarDominio.test("www.teste"));
+console.log(validarDominio.test("teste.com"));
+console.log(validarDominio.test("www.horadecodar.com.br"));
+console.log(validarDominio.test("agenciacode68.com.br"));*/
+
+/*** validando e-mail 
+let validarEmail = /\w+@\w+\.\w+/;
+
+console.log(validarEmail.test("teste@gmail.com"));
+console.log(validarEmail.test("teste@gmail"));
+console.log(validarEmail.test("teste@gmail.com.br"));
+console.log(validarEmail.test("gmail.com")); */
+
+/*** validando data de nascimento 
+let nascimento = /^[0-9]{2}[/][0-9]{2}[/][0-9]{4}/;
+let nascimento2 = /[0-31]{2}[/][0-12]{2}[/][1940-2022]{4}/;//otimizado
+
+
+console.log(nascimento.test("25/02/2015"));
+console.log(nascimento.test("25/02/15"));
+console.log(nascimento.test("5/2/2015"));
+console.log(nascimento.test('23/11/1992'));*/
