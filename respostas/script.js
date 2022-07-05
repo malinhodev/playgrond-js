@@ -469,7 +469,7 @@ celta.dirigir('casa');
 celta.dirigir('casa');
 console.log(celta.tanque);*/
 
-/* exerc: 40 */
+/* exerc: 40 
 
 class Conta {
     constructor(contaCC,contaCP){
@@ -559,12 +559,60 @@ class ContaEspecial extends Conta{
 }
 
 let minhaConta = new Conta;
-let contaespecial = new ContaEspecial;
+let contaespecial = new ContaEspecial; */
 
 
 
-/***/console.log(minhaConta);
+/**console.log(minhaConta);**/
 
 
 
-/***/console.log(contaespecial);
+/**console.log(contaespecial);**/
+
+/** regex 
+//exerc: 41
+
+const validaMaiusculo = /[A-Z][^a-z]/;
+
+console.log(validaMaiusculo.test('oi'));
+console.log(validaMaiusculo.test('UAU'));
+console.log(validaMaiusculo.test('123'));
+console.log(validaMaiusculo.test('porra'));
+console.log(validaMaiusculo.test('Uau'));
+console.log(validaMaiusculo.test('UHUUUUUUU')); 
+
+//exerc 42
+
+const soId = /\w+ID\b/;
+
+console.log(soId.test('123quatroID'));
+console.log(soId.test('123quatroCINCO'));
+
+//exerc 43
+
+const validaMarca = /Marca: (Nike|Adidas|Puma|Asics)/;
+
+console.log(validaMarca.test("Marca: Adidas"));
+console.log(validaMarca.test("Marca: Olinpicos"));
+console.log(validaMarca.test("Marca: Puma"));
+console.log(validaMarca.test("Marca: Rainha"));
+
+//exerc 44
+
+const validaIP = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/;
+
+console.log(validaIP.test('127.0.0.1'));
+console.log(validaIP.test('000.0.0.101'));
+console.log(validaIP.test('127001'));
+console.log(validaIP.test('1270.0.00.1')); */
+
+//exerc 45
+//de 6 a 16 caracteres ^(?=.{6,16}$)
+//caracteres permetidos [a-z0-9-_]
+const validaUsuario = /^(?=.{6,16}$)[a-z0-9-_]/;
+
+console.log(validaUsuario.test("580973_bianca"));
+console.log(validaUsuario.test("aaaaaaaaaaaaaaaaaaancaaaaaaaa"));
+console.log(validaUsuario.test("5809"));
+
+
