@@ -51,4 +51,15 @@ let elementoPai = document.querySelector(".class");
 
 elementoPai.insertBefore(novoElemento, elementoAlvo);
 
+/***appendChild();
+ * adiciona um nó após todos o elementos do elemento pai especificado.
+ * adiciona dentro do elemento pai! na  ulmtima posição
+ */
 
+/***** replaceChild();
+ * repõe um antigo elemento no DOM, com um novo
+ */
+let footerH2 = document.querySelector("footer h2");
+let paiFooter = document.querySelector("footer");
+
+paiFooter.replaceChild(novoElemento, footerH2);
