@@ -28,3 +28,27 @@ console.log(document.body.childNodes[1].childNodes[1].innerText);
 console.log(document.getElementsByTagName('h1'));
 console.log(document.getElementById('id'));
 console.log(document.getElementsByClassName('class'));
+//método mais usado
+console.log(document.querySelector('.lista h3'));
+
+/**** Alterando o HTML
+ * podemos mudar quase tudo através da DOM
+ * adicionar, remover e clonar elementos
+ * podemos utilizar métodos como: insertBefore(); appendChild(); e 
+ * replaceChild();
+ * 
+ * ===== indert before
+ * insere um nó antes do nó de referencia do método
+ * precisamos de um elemento para ser adicionado
+ * o elemento que tera o outro elemento adicionado antes dele
+ * e o elemento pai destes dois
+ */
+let texto = document.createTextNode("texto do p novo");
+let novoElemento = document.createElement("p");
+novoElemento.appendChild(texto);
+let elementoAlvo = document.querySelector(".class h1");
+let elementoPai = document.querySelector(".class");
+
+elementoPai.insertBefore(novoElemento, elementoAlvo);
+
+
