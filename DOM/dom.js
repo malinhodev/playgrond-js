@@ -37,7 +37,7 @@ console.log(document.querySelector('.lista h3'));
  * podemos utilizar métodos como: insertBefore(); appendChild(); e 
  * replaceChild();
  * 
- * ===== indert before
+ * ===== insert before
  * insere um nó antes do nó de referencia do método
  * precisamos de um elemento para ser adicionado
  * o elemento que tera o outro elemento adicionado antes dele
@@ -63,3 +63,64 @@ let footerH2 = document.querySelector("footer h2");
 let paiFooter = document.querySelector("footer");
 
 paiFooter.replaceChild(novoElemento, footerH2);
+
+/***** creatTextNode();
+ * criando nó de texto e inserindo no elemento
+ */
+let pSemTexto = document.getElementById("sem-texto");
+let texto2 = document.createTextNode("texto do p sem texto.");
+
+pSemTexto.appendChild(texto2);
+
+/**** creatElement();
+ * cria qualquer tag HTML.
+ * criando e depois inserindo
+ */
+let lista = document.createElement('ul');
+for(i=0;i<5;i++){
+    let item2 = document.createElement('li');
+    let texto3 = document.createTextNode('texto lista' + i);
+    item2.appendChild(texto3);
+    lista.appendChild(item2);
+}
+let container = document.getElementById('id');
+container.appendChild(lista);
+
+/**** Modificando e lendo atributos
+ * podemos resgatar o valor de um atributo ou trocar com JS
+ * por exemplo, o href de uma tag a ou o src de um elemento img
+ * getAttribute(); pegar o valor
+ * setAttribute(); atualiza o valor 
+ */
+let a = document.querySelector("footer a");
+let link = 'https://www.google.com';
+a.setAttribute('href', link);
+
+/**** verificando altura e largura do elemneto
+ * offsetWidth - considera as bordas
+ * offsetHeight - considera as bordas
+ * 
+ * clientWidth - desconsidera bordas
+ * clientHeight - desconsidera bordas
+ */
+let verificaElemento = document.querySelector('.class h1');
+console.log(verificaElemento.offsetWidth);
+console.log(verificaElemento.offsetHeight);
+/**** Posição dos elementos na tela
+ * getBoundingClientRect();
+ */
+console.log(verificaElemento.getBoundingClientRect());
+
+/****Estilizando com JS
+ * acessando a propriedade style podemos fazer as modificações
+ * o estilo é manipulado direto na tag, ou seja, subdtitui o do CSS
+ * (na maioria das vezes)
+ */
+pSemTexto.style.color = 'red';
+/*** Selecionar vários elementos com query
+ * podemos utlizar o método querySelectAll();
+ * em vez de um, podemos pegar todos os elementos semelhantes 
+ * com o seletor do CSS
+ */
+let all = document.querySelectorAll('.itens-azuis');
+all[0].style.color = 'blue';
